@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Authentication workflow</title>
+    <script src="authentication_workflow.js" type="module"></script>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div id="projectSelector"></div>
+    <h1>Authentication workflow</h1>
+    <div class="outer-horizontal">
+      <div class="inner-horizontal">
+        <a
+          href="https://docs.agora.io/en/signaling/develop/authentication-workflow#deploy-a-token-server"
+          target="”_blank”"
+          >Deploy a token server.</a
+        ><br />
+        Update <code>serverUrl</code> in this sample code. <br />
+        Start the proxy server from <code>/src</code> using
+        <code>node proxy</code>.<br />
+        Run the app. Join using any UID and the app will fetch the token for
+        you.
+        <p />
+        <div>
+          <label>User ID: </label>
+          <input type="text" placeholder="User id" id="uid" />
+          <button class="button" type="button" id="login">LOGIN</button>
+        </div>
+        <div>
+          <label>Join any pub-sub channel: </label>
+          <input type="text" placeholder="Channel Name" id="channelName" />
+          <button class="button" type="button" id="join">Subscribe</button>
+          <button class="button" type="button" id="leave">Unsubscribe</button>
+        </div>
+        <div>
+          <label>Send a message to pub-sub channel</label>:
+          <input type="text" placeholder="Message" id="channelMessage" />
+          <button class="button" type="button" id="send_channel_message">
+            Send
+          </button>
+        </div>
+        <div>
+          <label>Join any stream channel (using RTC token): </label>
+          <input
+            type="text"
+            placeholder="Channel Name"
+            id="streamChannelName"
+          />
+          <button class="button" type="button" id="streamJoinAndLeave">
+            Join</button
+          ><br />
+        </div>
+        <p />
+        <p />
+        <button class="button" id="fullDoc">Read the doc for this app</button>
+      </div>
+    </div>
+    <p />
+    <hr />
+    <div id="log"></div>
+  </body>
+</html>
